@@ -3,6 +3,7 @@
 
 // Amir
 //new command i projekt
+//I need to update the code for next time 
 use panic_halt as _;
 use cortex_m_rt::entry;
 use stm32f3xx_hal::{pac, prelude::*};
