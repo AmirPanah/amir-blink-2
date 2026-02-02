@@ -1,9 +1,7 @@
 #![no_std]
 #![no_main]
 
-// Amir
-//new command i projekt
-//I need to update the code for next time 
+
 use panic_halt as _;
 use cortex_m_rt::entry;
 use stm32f3xx_hal::{pac, prelude::*};
@@ -17,7 +15,6 @@ fn main() -> ! {
 
     let mut gpioe = dp.GPIOE.split(&mut rcc.ahb);
 
-    // LEDها به ترتیب
     let mut led4 = gpioe.pe8.into_push_pull_output(&mut gpioe.moder, &mut gpioe.otyper);
     let mut led3 = gpioe.pe9.into_push_pull_output(&mut gpioe.moder, &mut gpioe.otyper);
     let mut led5 = gpioe.pe10.into_push_pull_output(&mut gpioe.moder, &mut gpioe.otyper);
